@@ -1,6 +1,11 @@
 # vue-vant-dynamic-form
 
+介绍：
+
+基于`vue、vant`的移动端动态表单
+
 ## Project setup
+
 ```
 npm install
 ```
