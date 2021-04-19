@@ -1,18 +1,19 @@
 <template>
   <div>
     <van-field v-model="text" label="文本" placeholder="请输入文本" clearable name="text"
-      :rules="[{ required: true, message: '此项不能为空' }]" />
+               :rules="[{ required: true, message: '此项不能为空' }]" />
   </div>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
       name: 'DyText',
       text: ''
     }
-  }
+  },
+  methods: {}
 }
-</script>
+</script>>
 <style lang="scss">
 </style>

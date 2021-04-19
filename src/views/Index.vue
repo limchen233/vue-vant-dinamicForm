@@ -14,14 +14,12 @@ export default {
   components: {
     DyText
   },
-  methods: {
-
-  }
+  methods: {}
 }
 </script>
 <style lang="scss">
-.mainPage{
-  img{
+.mainPage {
+  img {
     width: 30px;
     height: 30px;
   }
