@@ -18,7 +18,7 @@ export default {
 		return {
 			formItems: [
 				{ type: 'text', label: '文本' },
-				{ type: 'number' }
+				{ type: 'number', label: '数字' }
 			]
 		}
 	},
@@ -27,6 +27,7 @@ export default {
 </script>
 <style lang="scss">
 .mainPage {
+	padding: 5px 10px;
 	img {
 		width: 30px;
 		height: 30px;

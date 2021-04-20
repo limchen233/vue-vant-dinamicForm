@@ -70,4 +70,12 @@ export default {
 	}
 }
 </script>>
-<style lang="scss"></style>
+<style lang="scss">
+.van-cell {
+	border-bottom: 1px solid #ebedf0;
+}
+.van-field__label {
+	margin-right: 0 !important;
+	width: 5em !important;
+}
+</style>
