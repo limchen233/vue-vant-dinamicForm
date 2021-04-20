@@ -1,8 +1,8 @@
 <template>
-  <div class="mainPage">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <DyText />
-  </div>
+	<div class="mainPage">
+		<img alt="Vue logo" src="../assets/logo.png" />
+		<DyText />
+	</div>
 </template>
 
 <script>
@@ -10,18 +10,20 @@
 import DyText from '@/components/dynamicFormEle/DyText'
 
 export default {
-  name: 'Index',
-  components: {
-    DyText
-  },
-  methods: {}
+	name: 'Index',
+	components: {
+		DyText
+	},
+	methods: {
+
+	}
 }
 </script>
 <style lang="scss">
 .mainPage {
-  img {
-    width: 30px;
-    height: 30px;
-  }
+	img {
+		width: 30px;
+		height: 30px;
+	}
 }
 </style>
