@@ -1,22 +1,28 @@
 <template>
 	<div class="mainPage">
 		<img alt="Vue logo" src="../assets/logo.png" />
-		<DyText />
+		<DynamicFormPart :items="formItems" />
 	</div>
 </template>
 
 <script>
 // @ is an alias to /src
-import DyText from '@/components/dynamicFormEle/DyText'
+import DynamicFormPart from '../components/DynamicFormPart'
 
 export default {
 	name: 'Index',
 	components: {
-		DyText
+		DynamicFormPart
 	},
-	methods: {
-
-	}
+	data () {
+		return {
+			formItems: [
+				{ type: 'text', label: '文本' },
+				{ type: 'number' }
+			]
+		}
+	},
+	methods: {}
 }
 </script>
 <style lang="scss">
