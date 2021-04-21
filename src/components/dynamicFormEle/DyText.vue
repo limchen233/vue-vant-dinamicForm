@@ -71,11 +71,19 @@ export default {
 }
 </script>>
 <style lang="scss">
-.van-cell {
-	border-bottom: 1px solid #ebedf0;
-}
-.van-field__label {
-	margin-right: 0 !important;
-	width: 5em !important;
+.mainPage {
+	.van-cell {
+		border-bottom: 1px solid #ebedf0;
+		.van-cell__title {
+			margin-right: 0 !important;
+			width: 5.5rem !important;
+			flex: none;
+		}
+		.van-cell__value {
+			.van-radio--horizontal {
+				margin-right: 2rem !important;
+			}
+		}
+	}
 }
 </style>
