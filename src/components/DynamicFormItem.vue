@@ -1,10 +1,11 @@
 <script type="text/jsx">
 import DyText from './dynamicFormEle/DyText'
+import DyRadio from './dynamicFormEle/DyRadio'
 
 export default {
 	name: 'DynamicFormItem',
 	components: {
-		DyText
+		DyText, DyRadio
 	},
 	props: {
 		item: {
@@ -24,6 +25,8 @@ export default {
 			return (<DyText item={item}></DyText>)
 		} else if (item.type === 'email') {
 			return (<DyText item={item}></DyText>)
+		} else if (item.type === 'radio') {
+			return (<DyRadio item={item}></DyRadio>)
 		} else {
 			return (<div style="font-size:16px;color:red;">未识别的组件类型：【{item.type}】</div>)
 		}

@@ -17,8 +17,9 @@ export default {
 	data () {
 		return {
 			formItems: [
-				{ type: 'text', label: '文本' },
-				{ type: 'number', label: '数字' }
+				{ type: 'text', label: '文本', placeholder: '请输入文本' },
+				{ type: 'number', label: '数字', placeholder: '请输入数字' },
+				{ type: 'radio', label: '单选按钮', initValue: [{ kye: 0, name: '0', value: '否' }, { key: 1, name: '1', value: '是' }] }
 			]
 		}
 	},
@@ -29,8 +30,7 @@ export default {
 .mainPage {
 	padding: 5px 10px;
 	img {
-		width: 30px;
-		height: 30px;
+		scale: 0.5;
 	}
 }
 </style>
