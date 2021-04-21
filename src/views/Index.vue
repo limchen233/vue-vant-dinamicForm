@@ -19,7 +19,9 @@ export default {
 			formItems: [
 				{ type: 'text', label: '文本', placeholder: '请输入文本' },
 				{ type: 'number', label: '数字', placeholder: '请输入数字' },
-				{ type: 'radio', label: '单选按钮', initValue: [{ kye: 0, name: '0', value: '否' }, { key: 1, name: '1', value: '是' }], value: '' }
+				{ type: 'number', label: '联系方式', placeholder: '请输入手机号码' },
+				{ type: 'radio', label: '单选按钮', initValue: [{ kye: 0, name: '0', value: '否' }, { key: 1, name: '1', value: '是' }], value: '' },
+				{ type: 'number', label: 'Email', placeholder: '请输入邮箱地址' }
 			]
 		}
 	},
