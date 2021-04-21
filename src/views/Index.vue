@@ -21,7 +21,7 @@ export default {
 				{ type: 'number', label: '数字', placeholder: '请输入数字' },
 				{ type: 'number', label: '联系方式', placeholder: '请输入手机号码' },
 				{ type: 'radio', label: '单选按钮', initValue: [{ key: 0, name: '0', value: '否' }, { key: 1, name: '1', value: '是' }], value: '' },
-				{ type: 'select', label: '选择城市', initValue: [{ key: 0, value: '北京' }, { key: 0, value: '上海' }, { key: 0, value: '广州' }] },
+				{ type: 'select', label: '选择城市', initValue: [{ key: 0, value: '北京' }, { key: 1, value: '上海' }, { key: 2, value: '广州' }], showVal: '' },
 				{ type: 'number', label: 'Email', placeholder: '请输入邮箱地址' }
 			]
 		}
