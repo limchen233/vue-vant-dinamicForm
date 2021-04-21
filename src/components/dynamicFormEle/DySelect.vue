@@ -44,6 +44,19 @@ export default {
 			selectedIndex: 0
 		}
 	},
+	mounted () {
+		// 初始化下拉选的值
+		this.initValue.forEach((item, index) => {
+			this.columns.push(item.value)
+
+			// 取返回的key的对应值
+			if (item.key === this.$props.item.value) {
+				this.selectedIndex = index
+				this.$props.item.showVal = item.value
+				this.showVal = item.value
+			}
+		})
+	},
 	methods: {
 		// 点击输入框弹出popup
 		_click () {
