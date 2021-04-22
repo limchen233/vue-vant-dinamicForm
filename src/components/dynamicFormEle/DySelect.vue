@@ -45,15 +45,17 @@ export default {
 		}
 	},
 	mounted () {
+		console.log(this.$props.item)
 		// 初始化下拉选的值
 		this.initValue.forEach((item, index) => {
+			// 添加数据
 			this.columns.push(item.value)
-
-			// 取返回的key的对应值
+			// 根据返回的value值回显数据
 			if (item.key === this.$props.item.value) {
+				// 确定索引
 				this.selectedIndex = index
+				// 中文名称
 				this.$props.item.showVal = item.value
-				this.showVal = item.value
 			}
 		})
 	},
@@ -68,7 +70,7 @@ export default {
 			this.showPicker = false
 			// 根据点击的数据索引找到要绑定的key
 			this.$props.item.value = this.initValue[index].key
-			// 显示的中文名称
+			// 点击时显示的中文名称
 			this.$props.item.showVal = value
 		},
 
