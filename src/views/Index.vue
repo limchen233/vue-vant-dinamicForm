@@ -43,7 +43,17 @@ export default {
 					showVal: '',
 					value: ''
 				},
-				{ type: 'number', label: 'Email', placeholder: '请输入邮箱地址' }
+				{ type: 'email', label: 'Email', placeholder: '请输入邮箱地址' },
+				{
+					type: 'checkbox',
+					label: '多选框',
+					initValue: [
+						{ key: '0', value: '测试一' },
+						{ key: '1', value: '测试二' },
+						{ key: '2', value: '测试三' }
+					],
+					value: []
+				}
 			]
 		}
 	},

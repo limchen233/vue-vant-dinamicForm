@@ -2,11 +2,12 @@
 import DyText from './dynamicFormEle/DyText'
 import DyRadio from './dynamicFormEle/DyRadio'
 import DySelect from './dynamicFormEle/DySelect'
+import DyCheckbox from './dynamicFormEle/DyCheckbox'
 
 export default {
 	name: 'DynamicFormItem',
 	components: {
-		DyText, DyRadio, DySelect
+		DyText, DyRadio, DySelect, DyCheckbox
 	},
 	props: {
 		item: {
@@ -30,6 +31,8 @@ export default {
 			return (<DyRadio item={item}></DyRadio>)
 		} else if (item.type === 'select') {
 			return (<DySelect item={item}></DySelect>)
+		} else if (item.type === 'checkbox') {
+			return (<DyCheckbox item={item}></DyCheckbox>)
 		} else {
 			return (<div style="font-size:16px;color:red;">未识别的组件类型：【{item.type}】</div>)
 		}

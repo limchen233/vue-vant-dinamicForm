@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<van-cell :title="label" style="text-align: left">
+		<van-cell :title="label" class="labelStyle">
 			<van-radio-group v-model="item.value" direction="horizontal">
 				<van-radio
 					style="margin: 0 0.18rem 0.25rem 0"
