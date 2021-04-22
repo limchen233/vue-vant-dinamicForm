@@ -3,7 +3,7 @@
 		<van-field
 			v-if="item.type === 'text'"
 			clearable
-			:label="item.label"
+			:label="label"
 			name="text"
 			:placeholder="item.placeholder"
 			v-model="item.value"
@@ -31,13 +31,13 @@
 			clearable
 			:required="item.required"
 			:rules="[
-				{ required: item.required, message: '请填写您的手机号码！' },
+				{ required: item.required, message: '手机号码不能为空！' },
 				{ pattern: /^1[3456789]\d{9}$/, message: '手机号码格式错误！' }
 			]"
 		></van-field>
 		<van-field
 			v-if="item.type === 'email'"
-			type="tel"
+			type="text"
 			:label="item.label"
 			v-model="item.value"
 			:placeholder="item.placeholder"
@@ -45,7 +45,7 @@
 			clearable
 			:required="item.required"
 			:rules="[
-				{ required: item.required, message: '请填写您的邮箱！' },
+				{ required: item.required, message: '邮箱地址不能为空！' },
 				{
 					pattern: /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/,
 					message: '邮箱格式错误！'
@@ -55,7 +55,10 @@
 	</div>
 </template>
 <script>
+import DyBase from './DyBase'
 export default {
+	name: 'DyText',
+	extends: DyBase,
 	props: {
 		item: {
 			required: true

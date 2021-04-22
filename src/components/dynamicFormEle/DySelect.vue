@@ -4,6 +4,7 @@
 		<van-field
 			readonly
 			clickable
+			:label="label"
 			:value="item.showVal"
 			:disabled="item.disabled"
 			:rules="[{ required: item.required, message: '请选择' }]"
@@ -11,11 +12,7 @@
 			right-icon="arrow-down"
 			placeholder="请选择"
 			@click="_click"
-		>
-			<template #label>
-				<span class="customTitle">{{ label }}</span>
-			</template>
-		</van-field>
+		></van-field>
 		<van-popup v-model="showPicker" position="bottom">
 			<van-picker
 				show-toolbar
