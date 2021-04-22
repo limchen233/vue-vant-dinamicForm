@@ -37,6 +37,7 @@ export function parseTime (time, dateFormat) {
     return null
   }
   const format = dateFormat || '{y}-{m}-{d} {h}:{i}:{s}'
+
   let date
   if (typeof time === 'object') {
     date = time
@@ -69,8 +70,8 @@ export function parseTime (time, dateFormat) {
 
   // str.replace()方法返回一个由替换值替换部分或所有的模式（pattern）匹配项后的新字符串。
   // 模式可以是一个字符串或者一个正则表达式，替换值可以是一个字符串或者一个每次匹配都要调用的回调函数。
-  // result 是通过正则匹配到的字符串
-  const timeStr = format.replace(/{([ymdhisa])+}/g, (result, key) => {
+  // result（必须的） 是通过正则匹配到的字符串，key是匹配到的正则的数据，offset是匹配到的子字符串在原字符串中的偏移量，source代表源数据(即format)
+  const timeStr = format.replace(/{([ymdhisa])+}/g, (result, key, offset, source) => {
     const value = formatObj[key]
     // Note: getDay() returns 0 on Sunday
     if (key === 'a') { return ['日', '一', '二', '三', '四', '五', '六'][value] }
