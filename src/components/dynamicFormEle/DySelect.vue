@@ -42,7 +42,6 @@ export default {
 		}
 	},
 	mounted () {
-		console.log(this.$props.item)
 		// 初始化下拉选的值
 		this.initValue.forEach((item, index) => {
 			// 添加数据

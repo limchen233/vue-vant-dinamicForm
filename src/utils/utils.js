@@ -28,14 +28,15 @@ export const toJson = (str) => {
   }
   return str
 }
+
 /*
   格式化时间
 */
-export function parseTime (time, cFormat) {
+export function parseTime (time, dateFormat) {
   if (arguments.length === 0) {
     return null
   }
-  const format = cFormat || '{y}-{m}-{d} {h}:{i}'
+  const format = dateFormat || '{y}-{m}-{d} {h}:{i}:{s}'
   let date
   if (typeof time === 'object') {
     date = time
@@ -65,6 +66,10 @@ export function parseTime (time, cFormat) {
     s: date.getSeconds(),
     a: date.getDay()
   }
+
+  // str.replace()方法返回一个由替换值替换部分或所有的模式（pattern）匹配项后的新字符串。
+  // 模式可以是一个字符串或者一个正则表达式，替换值可以是一个字符串或者一个每次匹配都要调用的回调函数。
+  // key 是通过正则匹配到的字符串,result 是要显示的格式
   const timeStr = format.replace(/{([ymdhisa])+}/g, (result, key) => {
     const value = formatObj[key]
     // Note: getDay() returns 0 on Sunday
