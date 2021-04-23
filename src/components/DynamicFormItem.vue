@@ -4,11 +4,11 @@ import DyRadio from './dynamicFormEle/DyRadio'
 import DySelect from './dynamicFormEle/DySelect'
 import DyCheckbox from './dynamicFormEle/DyCheckbox'
 import DyDate from './dynamicFormEle/DyDate'
-
+import DyUpload from './dynamicFormEle/DyUpload'
 export default {
 	name: 'DynamicFormItem',
 	components: {
-		DyText, DyRadio, DySelect, DyCheckbox, DyDate
+		DyText, DyRadio, DySelect, DyCheckbox, DyDate, DyUpload
 	},
 	props: {
 		item: {
@@ -36,6 +36,8 @@ export default {
 			return (<DyCheckbox item={item}></DyCheckbox>)
 		} else if (item.type === 'date') {
 			return (<DyDate item={item}></DyDate>)
+		} else if (item.type === 'upload') {
+			return (<DyUpload item={item}></DyUpload>)
 		} else {
 			return (<div style="font-size:16px;color:red;">未识别的组件类型：【{item.type}】</div>)
 		}
