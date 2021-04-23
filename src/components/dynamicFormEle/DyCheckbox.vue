@@ -31,6 +31,10 @@ export default {
 		}
 	},
 	data () {
+		// 重置默认值
+		if (!this.$props.item.value) {
+			this.$props.item.value = []
+		}
 		return {
 
 		}
