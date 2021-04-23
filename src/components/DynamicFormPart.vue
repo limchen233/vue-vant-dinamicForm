@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="DynamicFormPart">
 		<DynamicFormItem
 			v-for="item in items"
 			:item="item"
@@ -21,3 +21,9 @@ export default {
 	}
 }
 </script>
+<style lang="scss">
+.DynamicFormPart {
+	// height: calc(100% - 44px);
+	overflow-y: auto;
+}
+</style>

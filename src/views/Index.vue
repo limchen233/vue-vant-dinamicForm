@@ -54,7 +54,8 @@ export default {
 					],
 					value: []
 				},
-				{ type: 'date', label: '请选择日期', placeholder: '请选择日期', value: '' }
+				{ type: 'date', label: '请选择日期', placeholder: '请选择日期', value: '' },
+				{ type: 'upload', label: '上传附件', value: '' }
 			]
 		}
 	},
@@ -63,19 +64,15 @@ export default {
 </script>
 <style lang="scss">
 .mainPage {
-	height: 100vh;
-	padding: 5px 10px;
-	position: relative;
+	height: 100%;
+	padding: 5px 10px 15px 10px;
 	img {
 		width: 5rem;
 		height: 5rem;
 		transform: scale(0.8);
 	}
 	.formSubmitBtn {
-		position: absolute;
-		bottom: 30px;
-		left: 50%;
-		transform: translateX(-50%);
+		margin-top: 30px;
 	}
 	.van-button--info {
 		width: 300px;
